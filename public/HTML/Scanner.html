@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code Scanner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<!------------------------------------------- CSS -------------------------------------------------------------->
+    <link rel="stylesheet" href="../CSS/Scanner.css" />
+<!--------------------------------------- Jquery import -------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!------------------------------------ QR code scan library ---------------------------------------------------->
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+  </head>
+<!-------------------------------------------------------------------------------------------------------------->
+<body>
+<!-------------------------------- Div/ container framing everyhing -------------------------------------------->
+  <div id="container">
+<!---------------------------- Starting scanner button with instructions --------------------------------------->
+    <a id="ScannerButton">
+        <div id="centeredText">
+           <ul>
+              <li class="Instructions" id="ClickHere">Click here to start the Scanner!</li>
+              <br>
+              <li class="Instructions">1. Point the QR code at the camera</li>
+              <li class="Instructions">2. Add the product info</li>
+              <li class="Instructions">3. Wait for your points to appear!</li>
+           </ul>
+         </div>
+      </a>
+<!------------------------------- Canvas element to hold the video --------------------------------------------->
+      <canvas hidden="" id="qr-canvas"></canvas>
+
+<!------- The result of the scan (later will be used with databases to hold the QR's actual info) -------------->
+      <div id="Result" hidden="">
+            <span id="outputData"><br><br>Recieved<br>+20 points!</span>
+      </div>
+<!------------------------------- The user inputs the product info --------------------------------------------->
+      <div id="ProductInfoInput" class="Forms">
+         <input class="InfoInput" type="text" placeholder="McVitie's Digestives Thins Milk Chocolate... " name="name" required/>
+         <input class="InfoInput" type="text" placeholder="Asda..." name="brand" required/>
+         <input class="InfoInput" type="number" step="0.01" min="0" max="1000" placeholder="(Pounds) 1.99..." name="price" required/>
+         <button id="SubmitProduct" type="submit">Submit</button>
+      </div>
+<!---------------- Return to the start/ Continue scanning/ Back to account buttons ----------------------------->
+      <div id="Buttons">
+          <div id="Stop">
+              <a id="StopButton"><br>Stop scanning</a>
+          </div>
+          <div id="Retry">
+              <a id="RetryButton"><br>Scan more!</a>
+          </div>
+          <div id="BackToAccount">
+              <a id="AccountLink" href="../HTML/AccountPage.html"><br>My account</a>
+          </div>
+       </div>
+
+  </div>  
+<!------------------------------------- Starting cube animation ------------------------------------------------>    
+  <div class="animatedButton">
+      <div class="flex">
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+        <div class="cube">
+          <div class="wall front"></div>
+          <div class="wall back"></div>
+          <div class="wall left"></div>
+          <div class="wall right"></div>
+          <div class="wall top"></div>
+          <div class="wall bottom"></div>
+        </div>
+      </div>
+  </div>
+<!------------------------------------------- The JS code ------------------------------------------------------>
+  <script src="../JS/QRCodeScanner.js"></script>
+<!-------------------------------------------------------------------------------------------------------------->
+</body>
+</html>

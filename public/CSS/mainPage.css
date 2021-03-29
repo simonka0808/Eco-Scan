@@ -1,0 +1,766 @@
+ body {
+/*-----------------------------------------------------------------------------------------------------------*/
+/* Background image -----------------------------------------------------------------------------------------*/
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url(../Images/MainPageBackground.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/* Title/ Header --------------------------------------------------------------------------------------------*/
+h1{
+  font-family: 'Courier New';
+  letter-spacing: 0.1em;
+  font-weight: normal; 
+  text-align: center;
+  color: #ebede2 ;
+  opacity: 0.8;
+  font-size: 2.7vw;
+  margin-top: 4.5vw;
+  margin-left: -40vw; 
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/* Navigation Bar -------------------------------------------------------------------------------------------*/
+.menuText{
+  font-size: 140%;
+  font-family: 'Bahnschrift';
+  color: #61de56;
+  opacity: 0.5;
+  text-decoration: none;
+  vertical-align: middle;
+  display: table-cell;   
+}
+.menuBox{
+  cursor: pointer;
+  position: absolute;  
+  display: table;
+  text-align: center; 
+  width: 13.5vw;
+  height: 13.5vw;
+  background-color:#61de56;
+  opacity: 0.4;
+  margin-left: 10%;
+  margin-top: 3%;
+  border-radius: 20%;  
+  transition: all 0.27s ease-in;   
+}
+
+/* Hover efects of nav bar ---------------------------------------------------------------------*/
+.menuBox:hover{
+  background-color: #e6e3e3;
+  opacity: 1;
+  margin-top: 1.7%;
+  box-shadow: 0 0.3vw 1.7vw rgba(173, 250, 190, 0.904);  
+}
+.menuText:hover{
+  color: #0a1208;
+  opacity: 1;
+}
+
+/* Positions ----------------------------------------------------------------------------------*/
+#System.menuBox{
+  top: 13vw;
+  left: 46vw; 
+}
+#LogIn.menuBox{
+  top: 28vw;
+  left: 1vw;  
+}
+#Scanner.menuBox{
+  top: 28vw;
+  left: 16vw; 
+}
+#EcoShop.menuBox{
+  top: 28vw;
+  left: 31vw;  
+}
+#Recycle.menuBox{
+  top: 28vw;
+  left: 46vw; 
+}
+#ScanItems.menuBox{
+  top: 28vw;
+  left: 61vw; 
+}
+#Articles.menuBox{
+  top: 43vw;
+  left: 46vw;   
+}
+
+/* Reveal Button  ----------------------------------------------------------------------------*/
+#Button{ 
+  cursor: pointer;
+  font-family: 'Courier New';
+  text-align: center; 
+  font-weight: bold;
+  color: #fafafa;;
+  opacity: 0.7;
+  font-size: 1.3vw;
+  float: right;  
+  margin-right: 18vw;
+  margin-top: 40vw;
+  transition: all 0.25s ease-in;
+}
+#Button:hover{
+  color: #ffffff;
+  opacity: 1;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/* Quick Links ----------------------------------------------------------------------------------------------*/
+.QuickLinksSection{
+  position: absolute;
+  width: 100%;
+  top: -10vw;
+  height: 17vw;
+  background-color:white;
+  -webkit-box-shadow: 0 2vw 4vw -3vw rgba(97, 96, 96, 0.479);
+	   -moz-box-shadow: 0 2vw 4vw -3vw rgba(97, 96, 96, 0.452);
+	        box-shadow: 0 2vw 4vw -3vw rgba(97, 96, 96, 0.274);
+}
+/*------------------------------------------------------------------------------------------*/
+.QuickLink{
+  cursor: pointer;
+  position: absolute;  
+  width: 11.5vw;
+  top: 3vw;
+  height: 10vw;
+  margin-top: -0.5%;
+  border-radius: 2.2vw;
+  border: 0.7vw solid black;
+  text-align:center;
+  transition: all 0.25s ease-in;
+}
+.LinkIcons{
+  width: 40%;  
+  margin-top: 5%;
+}
+.LinkText{
+   font-size: 1.3vw;
+   font-family: 'Bahnschrift';
+   color: black;
+   text-decoration: none;
+   margin-left: 5%;
+   padding-bottom: 25% ;
+   padding-top: 55%;
+ }
+ 
+ /*------------------------------------------------------------------------------------------*/
+.QuickLink:hover{
+border: 0.7vw solid #50be32;
+margin-top: -2%;
+}
+.LinkText:hover{
+ color: #31791b;
+}
+.MobileText{
+  visibility: hidden;
+}
+
+/* Positions of quick links -------------------------------------------------------------------*/
+#AboutLink.QuickLink{
+ left: 12vw;  
+}
+#WhereLink.QuickLink{
+ left: 33vw; 
+}
+#ScannerLink.QuickLink{
+ left: 54vw;  
+}
+#ShopLink.QuickLink{
+ left: 75vw;   
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/* Footer ---------------------------------------------------------------------------------------------------*/
+.Footer{
+  position: absolute;
+  max-width: 100%;
+  top: 185%;
+  right: 0%;
+  left: 0%;
+  height: 37vw;
+  background-color:white;  
+}
+/* Logo image -----------------------------------------------------------------------------*/
+#LogoText{
+  margin-top: 12%;
+  margin-left: 5vw;
+  width: 30%;
+}
+/* Contact info ---------------------------------------------------------------------------*/
+.ContactInfo{
+  margin-top: 4%;
+  margin-left: 2vw;
+}
+li {
+  font-family: 'Calibri';
+  font-size: 1.5vw;
+  list-style-type: none;
+  margin: 1vw 0;
+}
+
+/* Social media icons ----------------------------------------------------------------------*/
+.SocialBox{
+  cursor: pointer;
+  position: absolute;
+  width: 6vw;
+  margin-top: -15vw;
+  border-radius: 15%;
+  text-align: center;
+  background-color:#fafafaef;
+  transition: all 0.25s ease-in;
+  }
+  .Icons{
+  width: 3vw;
+  padding: 1vw;
+  }
+  
+  /* Positions of social icons --------------------------------------------------------------*/
+  #Instagram.SocialBox{
+  margin-left: 45vw;
+  }
+  #Twitter.SocialBox{
+    margin-left: 55vw;
+  }
+  #Youtube.SocialBox{
+    margin-left: 65vw;
+  }
+  #Facebook.SocialBox{
+    margin-left: 75vw;
+  }
+/* Hoover effects of social icons -------------------------------------------------------------*/
+#Instagram:hover{
+  box-shadow: 0vw 1vw 1vw 0vw #fbae5036;
+  background-color:#fafafa2a;
+}
+#Twitter:hover{
+  box-shadow: 0vw 1vw 1vw 0vw #4ac8ee36;
+  background-color:#fafafa2a;
+}
+#Youtube:hover{
+  box-shadow: 0vw 1vw 1vw 0vw #fc58582a;
+  background-color:#fafafa2a;
+}
+#Facebook:hover{
+  box-shadow: 0vw 1vw 1vw 0vw #557bf72a;
+  background-color:#fafafa2a;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/* Resizing and Mobile sized screen ----------------------------------------------------------------------------*/
+@media (min-width: 250px) and (max-width: 349px) {
+  
+  h1{
+    font-size: 6vw;
+    margin-left: 0vw;
+    margin-top: 13%;
+  }
+/*------------------------------------------------------------------------------------------*/
+.menuText{
+  font-size: 85%;
+}
+.menuBox{
+  width: 72px;
+  height: 72px;
+}
+/*------------------------------------------------------------------------------------------*/  
+  #System.menuBox{
+    top: 64vw;
+    left: 41vw;  
+  }
+  #LogIn.menuBox{
+    top: 88vw;
+    left: -7vw; 
+  }  
+  #Scanner.menuBox{
+    top: 88vw;
+    left: 17vw;  
+  }
+  #EcoShop.menuBox{
+    top: 64vw;
+    left: 17vw;   
+  }
+  #Recycle.menuBox{
+    top: 88vw;
+    left: 41vw;  
+  }
+  #ScanItems.menuBox{
+    top: 88vw;
+    left: 65vw;  
+  }
+  #Articles.menuBox{
+    top: 112vw;
+    left: 41vw;    
+  }
+
+/*------------------------------------------------------------------------------------------*/
+  #Button{   
+    font-size: 3.5vw;
+    margin-top: 113vw; 
+    margin-right: 25vw; 
+  } 
+/*------------------------------------------------------------------------------------------*/
+.Footer {
+  top: 125%;
+  bottom: 0%;
+  height: 140vw;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------------------------------*/
+ #LogoText{
+    margin-top: 55%;
+    margin-left: 0%;
+    width: 65%;
+  }
+  .ContactInfo{
+    margin-top: 4%;
+    margin-left: -5%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 350px) and (max-width: 399px) {
+  
+  h1{
+    font-size: 6vw;
+    margin-left: 0vw;
+    margin-top: 13%;
+  }
+/*------------------------------------------------------------------------------------------*/
+  .menuText{
+    font-size: 85%;
+  }
+  .menuBox{
+    width: 78px;
+    height: 78px;
+  }
+/*---------------------------------------------------------------------------------------------------------------*/  
+  #System.menuBox{
+    top: 64vw;
+    left: 41vw;  
+  }
+  #LogIn.menuBox{
+    top: 88vw;
+    left: -6.5vw; 
+  }  
+  #Scanner.menuBox{
+    top: 88vw;
+    left: 17.5vw;  
+  }
+  #EcoShop.menuBox{
+    top: 64vw;
+    left: 17.5vw;   
+  }
+  #Recycle.menuBox{
+    top: 88vw;
+    left: 41.5vw;  
+  }
+  #ScanItems.menuBox{
+    top: 88vw;
+    left: 65.5vw;  
+  }
+  #Articles.menuBox{
+    top: 112vw;
+    left: 41.5vw;    
+  }
+
+/*------------------------------------------------------------------------------------------*/
+  #Button{   
+    font-size: 3vw;
+    margin-top: 113vw; 
+    margin-right: 27vw; 
+  } 
+/*------------------------------------------------------------------------------------------*/
+.Footer {
+  bottom: 0%;
+  height: 130vw;
+  text-align: center;
+}
+/*------------------------------------------------------------------------------------------*/
+  #LogoText{
+    margin-top: 44vw;
+    margin-left: 0%;
+    width: 70%;
+  }
+  .ContactInfo{
+    margin-top: 8%;
+    margin-left: -5%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 400px) and (max-width: 570px) {
+
+  h1{
+    font-size: 6vw;
+    margin-left: 0vw;
+    margin-top: 13%;
+  }
+/*------------------------------------------------------------------------------------------*/
+  .menuText{
+    font-size: 90%;
+  }
+  .menuBox{
+    width: 90px;
+    height: 90px;
+  }
+/*------------------------------------------------------------------------------------------*/
+  #System.menuBox{
+    top: 54vw;
+    left: 41.3vw;  
+  }
+  #LogIn.menuBox{
+    top: 78vw;
+    left: -6vw; 
+  } 
+  #Scanner.menuBox{
+    top: 78vw;
+    left: 17.6vw;  
+  }
+  #EcoShop.menuBox{
+    top: 54vw;
+    left: 17.6vw;   
+  }
+  #Recycle.menuBox{
+    top: 78vw;
+    left: 41.3vw;  
+  }
+  #ScanItems.menuBox{
+    top: 78vw;
+    left: 65vw;  
+  }
+  #Articles.menuBox{
+    top: 102vw;
+    left: 41.3vw;    
+  }
+/*------------------------------------------------------------------------------------------*/  
+#Button{   
+  font-size: 2.5vw;
+  margin-top: 80vw; 
+  margin-right: 6vw; 
+} 
+/*------------------------------------------------------------------------------------------*/
+.Footer {
+  height: 120vw;
+}
+#LogoText{
+  margin-top: 44vw;
+  margin-left: 0%;
+  width: 70%;
+}
+.ContactInfo{
+  margin-top: 3vw;
+  margin-left: -7vw;
+}
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 250px) and (max-width: 569px) {
+ 
+  .LinkIcons{
+    width: 70%;  
+    margin-top: 10%;
+  }
+  .LinkText{
+    display: none;
+  }
+  .MobileText{
+    margin-top: 1.5vw;
+    font-size: 85%;
+    visibility: visible;
+  }
+/*------------------------------------------------------------------------------------------*/
+  #AboutLink.QuickLink{
+     left: 5vw;  
+  }
+  #WhereLink.QuickLink{
+     left: 29vw; 
+  }
+  #ScannerLink.QuickLink{
+     left: 52vw;  
+  }
+  #ShopLink.QuickLink{
+     left: 75vw;   
+  }
+/*------------------------------------------------------------------------------------------*/
+.QuickLinksSection{
+  height: 33%; 
+  top: -7vw;   
+}
+.QuickLink{
+  width: 17vw;
+  height: 17vw;
+  border: 1.5vw solid black;
+  margin-top: 4%;
+}
+.QuickLink:hover{
+  border: 1.5vw solid black;
+  border: 1.5vw solid #50be32;
+  margin-top: 1.5%;
+}
+/*------------------------------------------------------------------------------------------*/
+.Footer {
+  bottom: 0%;
+  height: 120vw;
+  text-align: center;
+}
+/*------------------------------------------------------------------------------------------*/
+   li{
+     font-size: 3.5vw;
+     margin: 1.2vw 0;
+  }
+  #ContactUs{
+     font-weight: lighter;
+     font-size: 6.3vw;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 530px) and (max-width: 570px) {
+  .QuickLink{
+      height: 15.5vw;
+  }
+  .MobileText{
+     font-size: 95%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 570px) and (max-width: 699px) {
+  h1{
+    font-size: 3.5vw;
+    top: 4vw;
+  }
+/*------------------------------------------------------------------------------------------*/
+  .menuBox{
+    width: 100px;
+    height: 100px;
+  }
+  .menuText{
+    font-size: 110%;
+  }
+/*------------------------------------------------------------------------------------------*/
+  #System.menuBox{
+    top: 15.5vw;
+    left: 48.5vw; 
+  }
+  #LogIn.menuBox{
+    top: 33vw;
+    left: -5vw;  
+  }
+  #Scanner.menuBox{
+    top: 33vw;
+    left: 13vw; 
+  }
+  #EcoShop.menuBox{
+    top: 33vw;
+    left: 31vw;  
+  }
+  #Recycle.menuBox{
+    top: 33vw;
+    left: 48.5vw; 
+  }
+  #ScanItems.menuBox{
+    top: 33vw;
+    left: 66vw; 
+  }
+  #Articles.menuBox{
+    top: 51vw;
+    left: 48.5vw;   
+  }
+/*------------------------------------------------------------------------------------------*/
+  #Button{
+    font-size: 2vw;
+    margin-top: 45vw;
+    margin-right: 7vw;
+  }
+/*------------------------------------------------------------------------------------------*/
+.QuickLinksSection{
+  height: 33%; 
+  top: -7vw;  
+}
+.QuickLink{
+  width: 17vw;
+  height: 17vw;
+  border: 1vw solid black;
+  margin: 5vw 8vw 3vw -5vw;
+}
+.QuickLink:hover{
+  border: 1vw solid #50be32;
+  margin-top: 1.5%;
+}
+.LinkText{
+  font-size: 2vw;
+}
+/*------------------------------------------------------------------------------------------*/
+ 
+.Footer {
+  height: 120vw;
+  text-align: center;
+}
+#LogoText{
+  margin-top: 44vw;
+  margin-left: 0%;
+  width: 70%;
+}
+.ContactInfo{
+  margin-top: 3vw;
+  margin-left: -7vw;
+}
+li{
+  font-size: 3.5vw;
+  margin: 1.2vw 0;
+}
+#ContactUs{
+  font-weight: lighter;
+  font-size: 6.3vw;
+}
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 700px) and (max-width: 1000px) {
+  .menuBox{
+    width: 120px;
+    height: 120px;
+  }
+  .menuText{
+    font-size: 95%;
+  }
+/*------------------------------------------------------------------------------------------*/
+  #Button{
+    font-size: 1.7vw;
+    margin-right: 9vw;
+    margin-top: 49vw;
+  }
+/*------------------------------------------------------------------------------------------*/
+  #System.menuBox{
+    top: 14vw;
+    left: 48vw; 
+  }
+  #LogIn.menuBox{
+    top: 32vw;
+    left: -6vw;  
+  }
+  #Scanner.menuBox{
+    top: 32vw;
+    left: 12vw; 
+  }
+  #EcoShop.menuBox{
+    top: 32vw;
+    left: 30vw;  
+  }
+  #Recycle.menuBox{
+    top: 32vw;
+    left: 48vw; 
+  }
+  #ScanItems.menuBox{
+    top: 32vw;
+    left: 66vw; 
+  }
+  #Articles.menuBox{
+    top: 50vw;
+    left: 48vw;   
+  }
+/*------------------------------------------------------------------------------------------*/
+.QuickLink{
+  width: 12vw;
+  height: 11vw;
+}
+.QuickLinksSection{
+  height: 42%;
+}
+/*------------------------------------------------------------------------------------------*/
+.Footer{
+  height: 42vw;
+}
+#LogoText{
+  width: 40%;
+  }
+.ContactInfo{
+margin-left: 0vw;
+}
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 801px) and (max-width: 940px) {
+ .menuBox{
+      width: 140px;
+      height: 140px;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/    
+@media (min-width: 941px) and (max-width: 1000px) {
+  .menuBox{
+    width: 150px;
+    height: 150px;
+  }
+  .menuText{
+    font-size: 130%;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1399px) {
+  .menuText{
+    font-size: 135%;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1999px) {
+  .menuText{
+    font-size: 165%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 2000px) and (max-width: 2999px) {
+  .menuText{
+    font-size: 240%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+  @media (min-width: 3000px) and (max-width: 5000px) {
+  .menuText{
+    font-size: 360%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+@media (min-height: 50px) and (max-height: 450px) {
+  .Footer{
+    top: 350%;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 699px) {
+  .SocialBox{
+    width: 7vw;
+    margin-top: 0vw;
+  }
+  #LogoText{
+    margin-bottom: 4vw;
+    width: 62vw;
+  }
+    .Icons{
+    width: 5vw;
+    }
+    .ContactInfo{
+      margin-bottom: 8vw;
+    }
+    #Instagram.SocialBox{
+      margin-left: 22vw;
+    }
+    #Twitter.SocialBox{
+      margin-left: 38vw;
+    }
+    #Youtube.SocialBox{
+      margin-left: 53vw;
+    }
+    #Facebook.SocialBox{
+      margin-left: 68vw;
+    }
+  }
+  

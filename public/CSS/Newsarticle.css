@@ -1,0 +1,106 @@
+/* Styling of the left side div image*/
+#leftimage{
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+}
+/*Styling of the right side div image */
+#rightimage{
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px ;
+}
+/* styling of all h2 in the html page */
+ h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 40px;
+  text-align: center ;
+}
+/* Style all p tag in the html */
+p{
+  display:block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+/* using flex to float div to the right and center */
+.flex-container{
+  display: flex;
+  text-align: center;
+}
+
+/* styling the right side div */
+.right{
+  flex: 30%;
+  background-color: whitesmoke;
+  box-shadow:5px 5px 5px rgba(49, 48, 48, 0.158);
+  margin-left: 180px;
+  margin-right: 20px;
+  top: 100vw;
+  border-radius: 20px;
+}
+/* Styling the left side div*/
+
+.left{
+  flex: 30%;
+  background-color: whitesmoke;
+  box-shadow:5px 5px 5px rgba(128, 128, 128, 0.603);
+  margin-right: 300px;
+  margin-left: 20px;
+  top: 100vw;
+  border-radius: 20px;
+}
+.container{
+  display: flex;
+ align-items: flex-start;
+ text-align: center;
+ padding: 10px 20px;
+}
+/*Style the clock */
+#clock{
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 30px;
+  box-shadow:20px 20px 50px white;
+  
+  
+}
+/* style the title of the page */
+.title{
+  margin-top: 50px;
+  box-shadow:20px 20px 50px white;
+  
+  margin-left: 400px;
+}
+
+/* style the div at the bottom of the page that contain the video */
+div.recyclevideo {
+  width: 30%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 40%;
+  border-radius: 20px;
+}
+/* Adding a hover in the recyclevideo div image */
+#video:hover{
+  box-shadow: 0 0 2px 1px rgba(21, 185, 21, 0.5); 
+}
+/* Footer */
+.Footer{
+  top: 80em;  
+}
+@media (min-width: 250px) and (max-width: 699px) {
+  .Footer {
+    top: 270vw;
+  }
+}  

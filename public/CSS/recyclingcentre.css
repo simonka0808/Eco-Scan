@@ -1,0 +1,209 @@
+#map {
+  height: 100%;
+  background-color: lightgrey;
+}
+
+/* Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Bahnschrift';
+}
+
+/* Styling for an info pane that slides out from the left. 
+ * Hidden by default. */
+#panel {
+  height: 100%;
+  width: null;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  overflow-x: hidden;
+  text-align: center;
+  transition: all 0.27s ease-in;
+}
+.open {
+  width: 25vw;
+  border-radius: 2vw;
+}
+
+/* Styling for place details */
+.hero {
+  width: 100%;
+  height: auto;
+  max-height: 18.5vw;
+  display: block;
+  box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.103), 0 1vw 1vw 0 rgba(0, 0, 0, 0.103);
+}
+
+/* Style the google place API and all p tag in the map */
+.place,
+p {
+  font-size: 1.45vw;
+  margin: 3vw 2vw 2vw 2vw;
+}
+
+/* style to create the color of the detail of places */
+.details {
+  color: black;
+}
+
+/* Create a color for the weblink in the page */
+.link {
+  padding: 2vw;
+  font-size: 1.5vw;
+  border-radius: 1.5vw;
+  margin: 1vw;
+  text-decoration: none;
+  color: rgb(28, 182, 14);
+  transition: all 0.27s ease-in;
+}
+* {
+  box-sizing: border-box;
+}
+
+a:hover{
+  box-shadow: 0 0.2vw 0.5vw 0 rgba(0, 0, 0, 0.103), 0 0.5vw 1vw 0 rgba(0, 0, 0, 0.103);
+}
+/* style all h2 in the html page to be center */
+h2{
+  font-weight: lighter;
+  text-align: center;
+}
+h1, h3{
+  text-align: center;
+  
+}
+.paragraph {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer ---------------------------------------------------------------------------------------------------*/
+.Footer{
+  position: absolute;
+  max-width: 100%;
+  top: 65vw;
+  right: 0;
+  left: 0;
+  height: 19vw;
+  background-color:white;  
+}
+/*-------------------------------------------------------------------------------------------*/
+#LogoText{
+margin-top: 3vw;
+margin-left: 5vw;
+width: 30%;
+}
+.ContactInfo{
+margin-top: 5vw;
+margin-left: 2vw;
+margin-bottom: 8vw;
+}
+li.Contacts {
+font-family: 'Calibri';
+font-size: 2vw;
+list-style-type: none;
+margin: 1vw 0;
+}
+/*-------------------------------------------------------------------------------------------*/
+.SocialLinks{
+width: 35%;
+}    
+.SocialBox{
+cursor: pointer;
+position: absolute;
+width: 6vw;
+margin-top: -15vw;
+border-radius: 15%;
+text-align: center;
+background-color:#fafafaef;
+transition: all 0.25s ease-in;
+}
+.Icons{
+width: 5vw;
+padding: 1vw;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+#Instagram.SocialBox{
+margin-left: 45vw;
+}
+#Twitter.SocialBox{
+  margin-left: 55vw;
+}
+#Youtube.SocialBox{
+  margin-left: 65vw;
+}
+#Facebook.SocialBox{
+  margin-left: 75vw;
+}
+
+/* Resizing ----------------------------------------------------------------------------------*/
+@media (min-width: 250px) and (max-width: 699px) {
+  h2{
+margin: 5vw;
+font-size: 5vw;
+text-align: left;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+.place,
+p {
+  font-size: 3vw;
+  margin: 3vw 2vw 2vw 2vw;
+}
+.link {
+  padding: 2vw;
+  font-size: 3vw; 
+}
+/*-------------------------------------------------------------------------------------------*/
+.Footer {
+  top: 150vw;
+  height: 80vw;
+  text-align: center;
+}
+#LogoText{
+  margin-top: 3vw;
+  margin-left: 0%;
+  margin-bottom: 4vw;
+  width: 55vw;
+}
+.ContactInfo{
+  margin-top: 5vw;
+  margin-left: -5%;
+}
+li.Contacts{
+  font-size: 3vw;
+  margin: 1.5vw 0;
+  margin-left: 0vw;
+}
+.SocialBox{
+  width: 9vw;
+  margin-top: 0vw;
+}
+  .Icons{
+  width: 7vw;
+  }
+  #Instagram.SocialBox{
+    margin-left: 22vw;
+  }
+  #Twitter.SocialBox{
+    margin-left: 38vw;
+  }
+  #Youtube.SocialBox{
+    margin-left: 53vw;
+  }
+  #Facebook.SocialBox{
+    margin-left: 68vw;
+  }
+}
+@media (min-width: 1400px) and (max-width: 5000px) {
+  h2{
+padding-bottom: 5vw;
+}
+}
